@@ -1,3 +1,6 @@
+.promo-block--mheight-300 {
+  min-height: 300px;
+}
 .promo-block--mheight-600 {
   min-height: 600px;
 }
@@ -22,3 +25,36 @@
 }.top-font {
   color: #EFEFEF;
  }
+div#login-form {
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 4px #888844;
+  background-color: #fafafa;
+
+  h1 {
+    background-color: transparent;
+    color: #888844;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  form {
+    div {
+      padding: 10px;
+      label {
+        display: block;
+        padding: 6px 0;
+      }
+      input[type="text"], input[type="password"] {
+        padding: 10px;
+        width: 360px;
+      }
+      input[type="submit"] {
+        padding: 10px 20px;
+      }
+      input[type="checkbox"]+label { display: inline-block }
+    }
+  }
+}
