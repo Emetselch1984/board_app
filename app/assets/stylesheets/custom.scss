@@ -1,0 +1,24 @@
+.promo-block--mheight-600 {
+  min-height: 600px;
+}
+#promo_image {
+  background-image: url("img1.jpg");
+}
+.overlay__inner {
+  position: relative;
+  z-index: 1;
+}
+.image-center {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translate3d(0, -50%, 0);
+}
+@media (max-width: 1199px) {
+  .promo-block {
+    background-attachment: fixed;
+  }
+}.top-font {
+  color: #EFEFEF;
+ }
