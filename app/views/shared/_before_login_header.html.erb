@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">ブランド</a>
+  <%= link_to "ブランド", root_path, class: 'navbar-brand'%>
   <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,10 +7,10 @@
   <div class="collapse navbar-collapse" id="Navber">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">ホーム <span class="sr-only">(現位置)</span></a>
+        <%= link_to (t 'defaults.register_page'), new_user_path, class: 'nav-link'%>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">リンク</a>
+        <%= link_to (t 'defaults.login'), login_path, class: 'nav-link'%>
       </li>
       <li class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -29,35 +29,7 @@
       <input type="search" class="form-control mr-sm-2" placeholder="検索..." aria-label="検索...">
       <button type="submit" class="btn btn-outline-success my-2 my-sm-0">検索</button>
     </form>
-    <ul class='navbar-nav ml-auto'>
-      <li class='nav-item dropdown dropdown-slide'>
-        <a href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-          掲示板
-        </a>
 
-        <div class='dropdown-menu '>
-          <%= link_to "掲示板一覧", root_path, class: 'dropdown-item' %>
-          <%= link_to "掲示板作成", root_path, class: 'dropdown-item' %>
-        </div>
-      </li>
-
-      <li class='nav-item'>
-        <%= link_to "ブックマーク",root_path , class: 'nav-link' %>
-      </li>
-
-      <li class='nav-item dropdown '>
-        <a href='#' class='nav-link' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' id='header-profile'>
-          <%= image_tag "img1.jpg", size: '40x40', class: 'rounded-circle mr15'%>
-        </a>
-        <div class='dropdown-menu dropdown-menu-right'>
-          <div class='dropdown-item'> ユーザーネーム</div>
-          <div class='dropdown-divider'></div>
-          <%= link_to 'プロフィール', root_path, class: 'dropdown-item' %>
-
-          <%= link_to (t 'defaults.logout'), logout_path, class: 'dropdown-item', method: :delete %>
-        </div>
-      </li>
-    </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
 

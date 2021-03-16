@@ -2,6 +2,7 @@ ja:
   defaults:
     login: 'ログイン'
     register: '登録'
+    register_page: '新規登録'
     logout: 'ログアウト'
     edit: '編集'
     delete: '削除'
