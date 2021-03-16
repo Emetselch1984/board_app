@@ -24,3 +24,8 @@ ja:
       fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
+  profiles:
+    show:
+    edit:
+      title: "編集ページ"
+
