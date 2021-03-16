@@ -7,7 +7,14 @@
   <div class="collapse navbar-collapse" id="Navber">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">ホーム <span class="sr-only">(現位置)</span></a>
+        <p class="nav-link">
+          ID: <%= current_user.id %>
+        </p>
+      </li>
+      <li class="nav-item active">
+        <p class="nav-link">
+          <%= current_user.last_name %>
+        </p>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">リンク</a>
