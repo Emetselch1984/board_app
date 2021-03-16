@@ -36,6 +36,7 @@
     <orderEntry type="library" scope="PROVIDED" name="actionview (v6.0.3.5, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activejob (v6.0.3.5, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v6.0.3.5, rbenv: 2.6.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activemodel-serializers-xml (v1.0.2, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v6.0.3.5, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activestorage (v6.0.3.5, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v6.0.3.5, rbenv: 2.6.6) [gem]" level="application" />
@@ -59,6 +60,7 @@
     <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v1.0.0, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="deep_merge (v1.2.1, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.4.4, rbenv: 2.6.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="draper (v4.0.1, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="dry-configurable (v0.12.0, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="dry-container (v0.7.2, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="dry-core (v0.5.0, rbenv: 2.6.6) [gem]" level="application" />
@@ -112,6 +114,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rb-fsevent (v0.10.4, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rb-inotify (v0.10.1, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.1.1, rbenv: 2.6.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="request_store (v1.5.0, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.10.1, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v3.10.1, rbenv: 2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v3.10.2, rbenv: 2.6.6) [gem]" level="application" />
@@ -155,6 +158,8 @@
         <option value="channel" />
         <option value="config:install" />
         <option value="controller" />
+        <option value="decorator" />
+        <option value="draper:install" />
         <option value="factory_bot:model" />
         <option value="generator" />
         <option value="helper" />
@@ -167,6 +172,7 @@
         <option value="model" />
         <option value="resource" />
         <option value="rspec:channel" />
+        <option value="rspec:decorator" />
         <option value="rspec:feature" />
         <option value="rspec:generator" />
         <option value="rspec:install" />
@@ -179,6 +185,7 @@
         <option value="task" />
         <option value="test_unit:channel" />
         <option value="test_unit:controller" />
+        <option value="test_unit:decorator" />
         <option value="test_unit:generator" />
         <option value="test_unit:helper" />
         <option value="test_unit:integration" />
@@ -199,6 +206,8 @@
         <option value="channel" />
         <option value="config:install" />
         <option value="controller" />
+        <option value="decorator" />
+        <option value="draper:install" />
         <option value="factory_bot:model" />
         <option value="generator" />
         <option value="helper" />
@@ -211,6 +220,7 @@
         <option value="model" />
         <option value="resource" />
         <option value="rspec:channel" />
+        <option value="rspec:decorator" />
         <option value="rspec:feature" />
         <option value="rspec:generator" />
         <option value="rspec:install" />
@@ -223,6 +233,7 @@
         <option value="task" />
         <option value="test_unit:channel" />
         <option value="test_unit:controller" />
+        <option value="test_unit:decorator" />
         <option value="test_unit:generator" />
         <option value="test_unit:helper" />
         <option value="test_unit:integration" />
@@ -428,6 +439,7 @@
           <RakeTaskImpl id="test">
             <subtasks>
               <RakeTaskImpl description="Run tests quickly, but also reset db" fullCommand="test:db" id="db" />
+              <RakeTaskImpl description="Run tests for {:decorators=&gt;&quot;test:prepare&quot;}" fullCommand="test:decorators" id="decorators" />
               <RakeTaskImpl description="Run system tests only" fullCommand="test:system" id="system" />
               <RakeTaskImpl description="" fullCommand="test:channels" id="channels" />
               <RakeTaskImpl description="" fullCommand="test:controllers" id="controllers" />
