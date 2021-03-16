@@ -17,7 +17,8 @@
           ドロップダウン
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">メニュー1</a>
+          <%= link_to (t 'defaults.login'), login_path, class: 'dropdown-item'%>
+          <%= link_to (t 'defaults.logout'), logout_path, class: 'dropdown-item', method: :delete %>
           <a class="dropdown-item" href="#">メニュー2</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">その他</a>
